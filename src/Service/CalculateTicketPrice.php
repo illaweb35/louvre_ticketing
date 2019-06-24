@@ -42,7 +42,7 @@ class CalculateTicketPrice
             }
         } catch (\Exception $e) {
             $this->addFlash('danger', "Error in price calculation");
-            return $this->redirecToroute('resa_new');
+            return $this->redirecToRoute('resa_new');
         }
     }
 }

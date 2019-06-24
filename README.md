@@ -6,7 +6,9 @@
 
 ### Context of the project
 
-The Louvre Museum has commissioned you for an ambitious project: to create a new system for booking and managing tickets online to reduce long queues and take advantage of the growing use of smartphones.
+The Louvre Museum has commissioned you for an ambitious project:
+
+ To create a new system for booking and managing tickets online to reduce long queues and take advantage of the growing use of smartphones.
 
 
 #### Production
@@ -19,6 +21,7 @@ The Louvre Museum has commissioned you for an ambitious project: to create a new
 - Html/ Twig
 - CSS
 - jQuery
+- Twig
 - SwifMailer
 - Stripe
 
@@ -47,8 +50,6 @@ The Louvre Museum has commissioned you for an ambitious project: to create a new
 
 #### How use the project
 
-To clone the project go to [repo_Github] (https://github.com/illaweb35/repo_Ticketing.git)
-
 You have the choice between downloading the zip, or cloning the deposit.
 
 Once you have searched for the repository, open the folder with your code editor and launch a terminal in the folder, then enter the following statements:
@@ -58,6 +59,13 @@ Once you have searched for the repository, open the folder with your code editor
    : $ composer update
 ```
 The database used by default is Sqlite.
+
+For installation  enter in terminal :
+```
+: $ ./bin/console doctrine:database:create
+: $ ./bin/console doctrine:migrations:migrate
+```
+
 
 If you want to use another database please refer to the symfony documentation.
 

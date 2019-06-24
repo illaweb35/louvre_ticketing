@@ -3,21 +3,48 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
+<link rel="stylesheet" type="text/css"
+    href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+    window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#edeff5",
+                    "text": "#838391"
+                },
+                "button": {
+                    "background": "#4b81e8",
+                    "text": "#000000"
+                }
+            },
+            "position": "bottom-right",
+            "content": {
+                "message": "Ce site utilise des cookies pour vous garantir la meilleure expérience sur notre site.",
+                "dismiss": "Continuer !",
+                "link": "En savoir plus"
+            }
+        })
+    });
+</script>
 <div class="container">
     <div class="jumbotron mt-5">
         <div class="container text-center mb-5">
             <a href="{{ path('home_infos')}}" class="btn btn-outline-primary btn-sm">
-                infos pratiques
+                <i class="fas fa-info"></i>
+                | infos pratiques
             </a>
         </div>
         <div class="container text-center">
-            <h1 class="display-3">Musée du Louvre</h1>
+            <h1 class="">Musée du Louvre</h1>
             <p class="lead">Bienvenue sur la billetterie du musée du Louvre.</p>
             <hr class="my-4">
             <p>Evitez les files d'attentes aux caisses, réservez dès maintenant.</p>
             <p class="lead">
-                <a type="button" class="btn btn-outline-primary" href="{{ path('resa_new')}}">
-                    Commandez vos billets
+                <a type="button" class="btn btn-outline-primary btn-sm" href="{{ path('resa_new')}}">
+                    <i class="fas fa-euro-sign"></i>
+                    | Commander vos billets
                 </a>
             </p>
         </div>
