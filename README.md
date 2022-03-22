@@ -2,7 +2,7 @@
 
 ## Project 4 Ticket Shop at the Louvre Museum
 
-
+![louvre](/public/img/louvre.png)
 
 ### Context of the project
 
